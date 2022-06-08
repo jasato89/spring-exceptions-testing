@@ -1,14 +1,15 @@
 package com.ironhack.exceptionsandtesting.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
+@NoArgsConstructor
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,5 +17,12 @@ public class Product {
     private String productName;
     private String productDescription;
     private double price;
+
+
+    public Product(String productName, String productDescription, double price) {
+        this.productName = productName;
+        this.productDescription = productDescription;
+        this.price = price;
+    }
 
 }
