@@ -23,6 +23,7 @@ public class ProductController implements IProductController {
         return productService.findById(id);
     }
 
+
     @GetMapping("find-all")
     @ResponseStatus(HttpStatus.OK)
     public List<Product> findAll() {

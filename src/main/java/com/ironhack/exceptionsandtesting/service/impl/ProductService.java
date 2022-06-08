@@ -21,7 +21,7 @@ public class ProductService implements IProductService {
         if (productRepository.findById(id).isPresent()) {
             return productRepository.findById(id).get();
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Pedro!!!!!! Product not found");
         }
     }
 
